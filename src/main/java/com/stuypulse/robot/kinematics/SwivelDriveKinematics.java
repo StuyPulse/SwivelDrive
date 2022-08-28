@@ -21,6 +21,10 @@ public class SwivelDriveKinematics {
         this.moduleOffsets = moduleOffsets;
     }
 
+    public Translation2d[] getModuleOffsets() {
+        return moduleOffsets;
+    }
+
     public SwivelModuleState[] toSwivelModuleStates(Pose2d chassis, Translation2d[] moduleSpeeds, ChassisSpeeds chassisSpeeds, double period) {
         if (moduleOffsets.length != moduleSpeeds.length) {
             throw new IllegalArgumentException("not good");
